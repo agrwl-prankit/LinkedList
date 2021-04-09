@@ -1,3 +1,5 @@
+package singlyLinkedList;
+
 public class Node {
 
     private int data;
