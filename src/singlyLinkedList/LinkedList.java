@@ -28,6 +28,17 @@ public class LinkedList {
         System.out.println("Data inserted at end successfully");
     }
 
+    public void insertAtPos(int pos, int data){
+        Node newNode = new Node(data);
+        Node temp = head;
+        for(int i=1; i<pos-1; i++){
+            temp = temp.getNext();
+        }
+        newNode.setNext(temp.getNext());
+        temp.setNext(newNode);
+        System.out.println(data + " inserted at " + pos + " successfully");
+    }
+
     public void getList(){
         Node temp = head;
         while (temp != null){
