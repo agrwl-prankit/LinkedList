@@ -10,7 +10,7 @@ public class Node {
         this.next = null;
     }
 
-    // as variables are private, we need getter-setter to access these variables
+    // getter-setter to access these variables
 
     public int getData() {
         return data;

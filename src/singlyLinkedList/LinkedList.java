@@ -28,6 +28,17 @@ public class LinkedList {
         System.out.println("Data inserted at end successfully");
     }
 
+    public void getList(){
+        Node temp = head;
+        while (temp != null){
+            System.out.print(temp.getData());
+            temp = temp.getNext();
+            if (temp!= null){
+                System.out.print("->");
+            }
+        }
+    }
+
     public boolean isEmpty(){
         return head == null;
     }
