@@ -11,5 +11,6 @@ public class MyMain {
         list.insertAtPos(3, 6);
         list.getList();
         list.getSize();
+        list.deleteAtBeginning();
     }
 }

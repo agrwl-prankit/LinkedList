@@ -39,6 +39,15 @@ public class LinkedList {
         System.out.println(data + " inserted at " + pos + " successfully");
     }
 
+    public void deleteAtBeginning(){
+        if (isEmpty()) System.out.println("List is already blank");
+        else {
+            head = head.getNext();
+            System.out.println("List after deletion of first element is: ");
+            getList();
+        }
+    }
+
     public void getList(){
         Node temp = head;
         while (temp != null){
@@ -53,9 +62,10 @@ public class LinkedList {
 
     public void getSize(){
         int count = 0;
+        Node temp = head;
         if (!isEmpty()) {
-            while (head != null) {
-                head = head.getNext();
+            while (temp != null) {
+                temp = temp.getNext();
                 count++;
             }
         }
