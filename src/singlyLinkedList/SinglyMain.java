@@ -1,8 +1,8 @@
 package singlyLinkedList;
 
-public class MyMain {
+public class SinglyMain {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        SinglyList list = new SinglyList();
         list.insertAtEnd(2);
         list.insertAtEnd(3);
         list.insertAtEnd(4);

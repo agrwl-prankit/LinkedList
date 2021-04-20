@@ -1,6 +1,6 @@
 package singlyLinkedList;
 
-public class LinkedList {
+public class SinglyList {
     Node head;
 
     public void insertAtBeginning(int data){
