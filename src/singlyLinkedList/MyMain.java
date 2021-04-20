@@ -12,5 +12,6 @@ public class MyMain {
         list.getList();
         list.getSize();
         list.deleteAtBeginning();
+        list.deleteAtEnd();
     }
 }

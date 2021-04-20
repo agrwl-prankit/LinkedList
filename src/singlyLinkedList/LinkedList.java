@@ -43,7 +43,22 @@ public class LinkedList {
         if (isEmpty()) System.out.println("List is already blank");
         else {
             head = head.getNext();
-            System.out.println("List after deletion of first element is: ");
+            System.out.print("List after deletion of first element is: ");
+            getList();
+        }
+    }
+
+    public void deleteAtEnd(){
+        Node temp = head;
+        Node previous = null;
+        if (isEmpty()) System.out.println("List is already blank");
+        else {
+            while (temp.getNext() != null){
+                previous = temp;
+                temp = temp.getNext();
+            }
+            previous.setNext(null);
+            System.out.print("List after deletion of last element is: ");
             getList();
         }
     }
