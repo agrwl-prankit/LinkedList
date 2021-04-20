@@ -13,5 +13,6 @@ public class MyMain {
         list.getSize();
         list.deleteAtBeginning();
         list.deleteAtEnd();
+        list.deleteAtPos(3);
     }
 }

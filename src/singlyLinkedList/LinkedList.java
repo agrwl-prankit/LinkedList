@@ -63,6 +63,21 @@ public class LinkedList {
         }
     }
 
+    public void deleteAtPos(int pos){
+        Node temp = head;
+        Node previous = null;
+        if (isEmpty()) System.out.println("List is already blank");
+        else {
+            for (int i=1; i<pos; i++){
+                previous = temp;
+                temp = temp.getNext();
+            }
+            previous.setNext(temp.getNext());
+            System.out.print("List after deletion of element at " + pos + " position is: ");
+            getList();
+        }
+    }
+
     public void getList(){
         Node temp = head;
         while (temp != null){
