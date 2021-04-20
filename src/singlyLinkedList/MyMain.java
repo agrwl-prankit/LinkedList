@@ -10,5 +10,6 @@ public class MyMain {
         list.insertAtBeginning(1);
         list.insertAtPos(3, 6);
         list.getList();
+        list.getSize();
     }
 }

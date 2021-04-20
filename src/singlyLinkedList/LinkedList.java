@@ -48,6 +48,18 @@ public class LinkedList {
                 System.out.print("->");
             }
         }
+        System.out.println("");
+    }
+
+    public void getSize(){
+        int count = 0;
+        if (!isEmpty()) {
+            while (head != null) {
+                head = head.getNext();
+                count++;
+            }
+        }
+        System.out.println("Size of list is: " + count);
     }
 
     public boolean isEmpty(){
