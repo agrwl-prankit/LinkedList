@@ -26,7 +26,17 @@ public class DoublyLinkedList {
         System.out.println(data + " inserted at the end successfully");
     }
 
-    public void getList(){
+    public void deleteFirst(){
+        if (isEmpty()) System.out.println("List is already empty");
+        else {
+            DoublyNode temp = head;
+            head = head.getNext();
+            System.out.println(temp.getData() + " is deleted successfully \nNew list is: ");
+            getListFromStart();
+        }
+    }
+
+    public void getListFromStart(){
         DoublyNode temp = head;
         if (isEmpty()) System.out.println("List is empty");
         else {
