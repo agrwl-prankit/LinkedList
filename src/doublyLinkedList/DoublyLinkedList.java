@@ -82,6 +82,18 @@ public class DoublyLinkedList {
         System.out.println("");
     }
 
+    public int getSize(){
+        int size = 0;
+        if (!isEmpty()){
+            DoublyNode temp = head;
+            while (temp != null){
+                size++;
+                temp = temp.getNext();
+            }
+        }
+        return size;
+    }
+
     public boolean isEmpty(){
         return head == null;
     }

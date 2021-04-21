@@ -9,7 +9,6 @@ public class DoublyMain {
         list.insertAtEnd(3);
         list.insertAtEnd(4);
         list.getListFromStart();
-        list.insertAtPos(9, 3);
-        list.deleteAtPos(3);
+        System.out.println("Size of list is: " + list.getSize());
     }
 }
