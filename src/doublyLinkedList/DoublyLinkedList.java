@@ -60,6 +60,15 @@ public class DoublyLinkedList {
         }
     }
 
+    public void deleteAtPos(int pos){
+        DoublyNode temp = head;
+        for (int i=1; i<pos; i++) temp = temp.getNext();
+        temp.getPrevious().setNext(temp.getNext());
+        temp.getNext().setPrevious(temp.getPrevious());
+        System.out.println("Data deleted at " + pos + " succesfully\nNew list is: ");
+        getListFromStart();
+    }
+
     public void getListFromStart(){
         DoublyNode temp = head;
         if (isEmpty()) System.out.println("List is empty");

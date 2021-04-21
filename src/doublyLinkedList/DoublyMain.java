@@ -10,5 +10,6 @@ public class DoublyMain {
         list.insertAtEnd(4);
         list.getListFromStart();
         list.insertAtPos(9, 3);
+        list.deleteAtPos(3);
     }
 }
