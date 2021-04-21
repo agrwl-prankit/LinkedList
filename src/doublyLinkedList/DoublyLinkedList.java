@@ -11,6 +11,7 @@ public class DoublyLinkedList {
             newNode.setNext(head);
         }
         head = newNode;
+        System.out.println("Data inserted at start successfully");
     }
 
     public boolean isEmpty(){
