@@ -26,6 +26,18 @@ public class DoublyLinkedList {
         System.out.println(data + " inserted at the end successfully");
     }
 
+    public void insertAtPos(int data, int pos){
+        DoublyNode newNode = new DoublyNode(data);
+        DoublyNode temp = head;
+        for (int i=1; i<pos; i++) temp = temp.getNext();
+        temp.getPrevious().setNext(newNode);
+        newNode.setPrevious(temp.getPrevious());
+        newNode.setNext(temp);
+        temp.setPrevious(newNode);
+        System.out.println(data + " inserted at pos " + pos + " successfully\nNew list is: ");
+        getListFromStart();
+    }
+
     public void deleteFirst(){
         if (isEmpty()) System.out.println("List is already empty");
         else {
