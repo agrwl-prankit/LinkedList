@@ -11,7 +11,7 @@ public class DoublyLinkedList {
             newNode.setNext(head);
         }
         head = newNode;
-        System.out.println("Data inserted at start successfully");
+        System.out.println(data + " inserted at start successfully");
     }
 
     public void insertAtEnd(int data){
@@ -23,6 +23,20 @@ public class DoublyLinkedList {
             temp.setNext(newNode);
             newNode.setPrevious(temp);
         }
+        System.out.println(data + " inserted at the end successfully");
+    }
+
+    public void getList(){
+        DoublyNode temp = head;
+        if (isEmpty()) System.out.println("List is empty");
+        else {
+            while (temp != null) {
+                System.out.print(temp.getData());
+                temp = temp.getNext();
+                if (temp != null) System.out.print("->");
+            }
+        }
+        System.out.println("");
     }
 
     public boolean isEmpty(){
