@@ -61,10 +61,16 @@ public class DoublyLinkedList {
     }
 
     public void deleteAtPos(int pos){
+        if (pos > getSize()) {
+            System.out.println("Position does not exist");
+            return;
+        }
         DoublyNode temp = head;
         for (int i=1; i<pos; i++) temp = temp.getNext();
         temp.getPrevious().setNext(temp.getNext());
-        temp.getNext().setPrevious(temp.getPrevious());
+        if (temp.getNext() != null){
+            temp.getNext().setPrevious(temp.getPrevious());
+        }
         System.out.println("Data deleted at " + pos + " succesfully\nNew list is: ");
         getListFromStart();
     }

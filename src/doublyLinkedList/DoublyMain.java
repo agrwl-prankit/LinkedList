@@ -5,10 +5,10 @@ public class DoublyMain {
         DoublyLinkedList list = new DoublyLinkedList();
         list.getListFromStart();
         list.insertAtStart(2);
+        list.deleteFirst();
         list.insertAtStart(1);
         list.insertAtEnd(3);
         list.insertAtEnd(4);
-        list.getListFromStart();
-        System.out.println("Size of list is: " + list.getSize());
+        list.deleteLast();
     }
 }
