@@ -1,11 +1,11 @@
 package singlyLinkedList;
 
-public class Node {
+public class SinglyNode {
 
     private int data;
-    private Node next;
+    private SinglyNode next;
 
-    public Node(int data){
+    public SinglyNode(int data){
         this.data = data;
         this.next = null;
     }
@@ -20,11 +20,11 @@ public class Node {
         this.data = data;
     }
 
-    public Node getNext() {
+    public SinglyNode getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext(SinglyNode next) {
         this.next = next;
     }
 }

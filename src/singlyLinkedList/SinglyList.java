@@ -1,10 +1,10 @@
 package singlyLinkedList;
 
 public class SinglyList {
-    Node head;
+    SinglyNode head;
 
     public void insertAtBeginning(int data){
-        Node node = new Node(data);
+        SinglyNode node = new SinglyNode(data);
         if (!isEmpty()) {
             node.setNext(head);
         }
@@ -13,13 +13,13 @@ public class SinglyList {
     }
 
     public void insertAtEnd(int data){
-        Node node = new Node(data);
+        SinglyNode node = new SinglyNode(data);
         // if list is empty, create a head with entered node
         if (isEmpty()){
             head = node;
         }
         else { // traverse till end and then insert
-            Node temp = head;
+            SinglyNode temp = head;
             while (temp.getNext() != null) {
                 temp = temp.getNext();
             }
@@ -29,8 +29,8 @@ public class SinglyList {
     }
 
     public void insertAtPos(int pos, int data){
-        Node newNode = new Node(data);
-        Node temp = head;
+        SinglyNode newNode = new SinglyNode(data);
+        SinglyNode temp = head;
         for(int i=1; i<pos-1; i++){
             temp = temp.getNext();
         }
@@ -49,8 +49,8 @@ public class SinglyList {
     }
 
     public void deleteAtEnd(){
-        Node temp = head;
-        Node previous = null;
+        SinglyNode temp = head;
+        SinglyNode previous = null;
         if (isEmpty()) System.out.println("List is already blank");
         else {
             while (temp.getNext() != null){
@@ -64,8 +64,8 @@ public class SinglyList {
     }
 
     public void deleteAtPos(int pos){
-        Node temp = head;
-        Node previous = null;
+        SinglyNode temp = head;
+        SinglyNode previous = null;
         if (isEmpty()) System.out.println("List is already blank");
         else {
             for (int i=1; i<pos; i++){
@@ -79,7 +79,7 @@ public class SinglyList {
     }
 
     public void getList(){
-        Node temp = head;
+        SinglyNode temp = head;
         while (temp != null){
             System.out.print(temp.getData());
             temp = temp.getNext();
@@ -92,7 +92,7 @@ public class SinglyList {
 
     public void getSize(){
         int count = 0;
-        Node temp = head;
+        SinglyNode temp = head;
         if (!isEmpty()) {
             while (temp != null) {
                 temp = temp.getNext();

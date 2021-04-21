@@ -1,11 +1,11 @@
 package doublyLinkedList;
 
-public class Node {
+public class DoublyNode {
 
     private int data;
-    private Node previous, next;
+    private DoublyNode previous, next;
 
-    public Node(int data, Node previous, Node next) {
+    public DoublyNode(int data) {
         this.data = data;
         this.previous = null;
         this.next = null;
@@ -19,19 +19,19 @@ public class Node {
         this.data = data;
     }
 
-    public Node getPrevious() {
+    public DoublyNode getPrevious() {
         return previous;
     }
 
-    public void setPrevious(Node previous) {
+    public void setPrevious(DoublyNode previous) {
         this.previous = previous;
     }
 
-    public Node getNext() {
+    public DoublyNode getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext(DoublyNode next) {
         this.next = next;
     }
 }
