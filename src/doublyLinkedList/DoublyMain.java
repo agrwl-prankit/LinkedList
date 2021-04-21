@@ -9,6 +9,6 @@ public class DoublyMain {
         list.insertAtEnd(3);
         list.insertAtEnd(4);
         list.getListFromStart();
-        list.deleteFirst();
+        list.deleteLast();
     }
 }

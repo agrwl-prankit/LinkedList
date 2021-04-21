@@ -36,6 +36,18 @@ public class DoublyLinkedList {
         }
     }
 
+    public void deleteLast(){
+        if (isEmpty()) System.out.println("List is already empty");
+        else {
+            DoublyNode temp = head, prev = null;
+            while (temp.getNext() != null) temp = temp.getNext();
+            prev = temp;
+            temp.getPrevious().setNext(null);
+            System.out.println(prev.getData() + " is deleted successfully \nNew list is: ");
+            getListFromStart();
+        }
+    }
+
     public void getListFromStart(){
         DoublyNode temp = head;
         if (isEmpty()) System.out.println("List is empty");
