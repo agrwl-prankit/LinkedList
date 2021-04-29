@@ -57,7 +57,8 @@ public class SinglyList {
                 previous = temp;
                 temp = temp.getNext();
             }
-            previous.setNext(null);
+            if (previous == null) head = null;
+            else previous.setNext(null);
             System.out.print("List after deletion of last element is: ");
             getList();
         }
@@ -79,15 +80,18 @@ public class SinglyList {
     }
 
     public void getList(){
-        SinglyNode temp = head;
-        while (temp != null){
-            System.out.print(temp.getData());
-            temp = temp.getNext();
-            if (temp!= null){
-                System.out.print("->");
+        if (isEmpty()) System.out.println("List is empty");
+        else {
+            SinglyNode temp = head;
+            while (temp != null) {
+                System.out.print(temp.getData());
+                temp = temp.getNext();
+                if (temp != null) {
+                    System.out.print("->");
+                }
             }
+            System.out.println("");
         }
-        System.out.println("");
     }
 
     public void getSize(){
